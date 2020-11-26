@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 public class TwentyFourtyEight {
+    //NOTE: only 1/2 test cases AC.
     public static void main(String[] args) throws IOException{
         boolean complete;
         ArrayList<Integer>board = new ArrayList<>();
