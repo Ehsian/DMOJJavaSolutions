@@ -11,7 +11,7 @@ public class CCC01S1 {
         String diamonds = str.substring(str.indexOf("D")+1,str.indexOf("H"));
         String hearts = str.substring(str.indexOf("H")+1,str.indexOf("S"));
         String spades = str.substring(str.indexOf("S")+1);
-        System.out.println("Cards Dealt     Points");
+        System.out.println("Cards Dealt Points");
         int total=0;
         int num1=0;
         String a = clubs;
@@ -22,7 +22,11 @@ public class CCC01S1 {
         if(a.length()==0){num1+=3;}
         if(a.length()==1){num1+=2;}
         if(a.length()==2){num1+=1;}
-        System.out.println("Clubs "+clubs+"     "+num1);
+        System.out.print("Clubs ");
+        for(int i=0;i<clubs.length();i++){
+            System.out.print(clubs.charAt(i)+" ");
+        }
+        System.out.println(num1);
         total+=num1;
         a = diamonds;
         num1 = 0;
@@ -33,7 +37,11 @@ public class CCC01S1 {
         if(a.length()==0){num1+=3;}
         if(a.length()==1){num1+=2;}
         if(a.length()==2){num1+=1;}
-        System.out.println("Diamonds "+diamonds+"     "+num1);
+        System.out.print("Diamonds ");
+        for(int i=0;i<diamonds.length();i++){
+            System.out.print(diamonds.charAt(i)+" ");
+        }
+        System.out.println(num1);
         total+=num1;
         a = hearts;
         num1 = 0;
@@ -44,7 +52,11 @@ public class CCC01S1 {
         if(a.length()==0){num1+=3;}
         if(a.length()==1){num1+=2;}
         if(a.length()==2){num1+=1;}
-        System.out.println("Hearts "+hearts+"     "+num1);
+        System.out.print("Hearts ");
+        for(int i=0;i<hearts.length();i++){
+            System.out.print(hearts.charAt(i)+" ");
+        }
+        System.out.println(num1);
         total+=num1;
         a = spades;
         num1 = 0;
@@ -55,7 +67,11 @@ public class CCC01S1 {
         if(a.length()==0){num1+=3;}
         if(a.length()==1){num1+=2;}
         if(a.length()==2){num1+=1;}
-        System.out.println("Spades "+spades+"     "+num1);
+        System.out.print("Spades ");
+        for(int i=0;i<spades.length();i++){
+            System.out.print(spades.charAt(i)+" ");
+        }
+        System.out.println(num1);
         total+=num1;
         System.out.println("Total "+total);
     }
