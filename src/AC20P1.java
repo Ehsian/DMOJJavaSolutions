@@ -4,21 +4,23 @@ public class AC20P1 {
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer tk;
+        int[]triangle = new int[3];
         int T = Integer.parseInt(br.readLine());
         for(int i=0;i<T;i++){
             tk = new StringTokenizer(br.readLine());
-            double num1 = Integer.parseInt(tk.nextToken());
-            double num2 = Integer.parseInt(tk.nextToken());
-            double num3 = Integer.parseInt(tk.nextToken());
-            double angle1 = Math.acos((Math.pow(num2,2)+Math.pow(num3,2)-Math.pow(num1,2))/(2*num2*num3));
-            double angle2 = Math.acos((Math.pow(num1,2)+Math.pow(num3,2)-Math.pow(num2,2))/(2*num1*num3));
-            double angle3 = Math.acos((Math.pow(num2,2)+Math.pow(num1,2)-Math.pow(num3,2))/(2*num2*num1));
-            if(Math.max(Math.max(angle1,angle2),angle3)==Math.PI/2){
-                System.out.println("R");
-            } else if(Math.max(Math.max(angle1,angle2),angle3)>Math.PI/2){
+            for(int j=0;j<3;j++){
+                triangle[j]=Integer.parseInt(tk.nextToken());
+            }
+            Arrays.sort(triangle);
+            int a = triangle[0];
+            int b = triangle[1];
+            int c = triangle[2];
+            if(Math.pow(a,2)+Math.pow(b,2)<Math.pow(c,2)){
                 System.out.println("O");
-            } else{
+            } else if(Math.pow(a,2)+Math.pow(b,2)>Math.pow(c,2)){
                 System.out.println("A");
+            } else{
+                System.out.println("R");
             }
         }
     }
