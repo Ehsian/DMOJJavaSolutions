@@ -1,4 +1,3 @@
-package mypackage;
 import java.io.*;
 import java.util.*;
 public class AAC3P2_Outdated {
