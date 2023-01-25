@@ -1,7 +1,7 @@
 package mypackage;
 import java.io.*;
 import java.util.*;
-public class AAC3P2_TODO {
+public class AAC3P2_Outdated {
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer tk = new StringTokenizer(br.readLine());
