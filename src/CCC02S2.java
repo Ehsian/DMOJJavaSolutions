@@ -7,8 +7,13 @@ public class CCC02S2 {
         if(a/b>=1){
             System.out.print(a/b);
         }
+        if(a/b>=1&&a-(a/b)*b!=0){
+            System.out.print(" ");
+        } else if(a/b>=1&&a-(a/b)*b==0){
+            System.out.println();
+        }
         if(a-(a/b)*b!=0){
-            System.out.println(" "+(a-(a/b)*b)/GCD(a,b)+"/"+(b/GCD(a,b)));
+            System.out.println((a-(a/b)*b)/GCD(a,b)+"/"+(b/GCD(a,b)));
         }
     }
     public static int GCD(int a,int b){
